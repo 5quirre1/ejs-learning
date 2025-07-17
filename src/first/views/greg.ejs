@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>greg</title>
+  </head>
+  <body>
+    <%
+      let names = ["greg", "sss", "apple"];
+    %>
+    
+    <% try { %>
+      <% if (names && names.length > 0) { %>
+        <ul>
+          <% names.forEach(item => { %>
+            <li><%= item %></li>
+          <% }); %>
+        </ul>
+      <% } else { %>
+        <h1>couldn't find names list, greg</h1>
+      <% } %>
+    <% } catch (err) { %>
+      <h1>error: <%= err.message %></h1>
+    <% } %>
+  </body>
+</html>
