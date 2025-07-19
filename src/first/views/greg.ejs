@@ -4,7 +4,7 @@
     <title>greg</title>
   </head>
   <body>
-    <%- include('thing/header') %>
+    <%- include('thing/header.ejs') %>
     <%
       let names = ["greg", "sss", "apple"];
     %>
@@ -14,7 +14,7 @@
         <ul>
           <% names.forEach(item => { %>
             <li><%= item %></li>
-          <% }); %>
+          <% }) %>
         </ul>
       <% } else { %>
         <h1>couldn't find names list, greg</h1>
