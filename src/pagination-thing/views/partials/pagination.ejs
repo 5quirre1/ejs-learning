@@ -1,0 +1,17 @@
+<div>
+  <% if (currentPage > 1) { %>
+    <a href="/?page=<%= currentPage - 1 %>">Previous</a>
+  <% } %>
+
+  <% for (let i = 1; i <= totalPages; i++) { %>
+    <% if (i === currentPage) { %>
+      <strong><%= i %></strong>
+    <% } else { %>
+      <a href="/?page=<%= i %>"><%= i %></a>
+    <% } %>
+  <% } %>
+
+  <% if (currentPage < totalPages) { %>
+    <a href="/?page=<%= currentPage + 1 %>">Next</a>
+  <% } %>
+</div>
