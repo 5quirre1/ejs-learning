@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>pagination</title>
+</head>
+<body>
+  <h1>pagunaton stuff</h1>
+
+  <ul>
+    <% items.forEach(item => { %>
+      <li><%= item %></li>
+    <% }); %>
+  </ul>
+
+  <%- include('partials/pagination.ejs', { currentPage, totalPages }) %>
+</body>
+</html>
